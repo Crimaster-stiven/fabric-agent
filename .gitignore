@@ -9,8 +9,8 @@ __pycache__/
 dist/
 build/
 
-# Streamlit
-.streamlit/
+# Streamlit secrets（本地敏感配置）
+.streamlit/secrets.toml
 
 # IDE
 .vscode/
@@ -19,5 +19,5 @@ build/
 # macOS
 .DS_Store
 
-# 项目临时文件
-scripts/
+# 临时 / 生成文件
+*.pdf
