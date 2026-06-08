@@ -21,42 +21,6 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# ============================================================
-# 简易密码保护
-# ============================================================
-APP_PASSWORD = os.getenv("APP_PASSWORD", "")
-
-# 隐藏 Streamlit 默认 UI 元素（右上角菜单、footer、header）
-hide_streamlit_style = """
-<style>
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}
-.stAppDeployButton {visibility: hidden;}
-div[data-testid="stDecoration"] {visibility: hidden;}
-</style>
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
-# 密码校验
-if APP_PASSWORD:
-    if "authenticated" not in st.session_state:
-        st.session_state.authenticated = False
-
-    if not st.session_state.authenticated:
-        st.title("🔒 面料外贸客户开发 Agent")
-        st.markdown("请输入密码以继续使用")
-        password_input = st.text_input("密码", type="password", placeholder="请输入访问密码")
-        col1, _ = st.columns([1, 3])
-        with col1:
-            if st.button("确认", use_container_width=True, type="primary"):
-                if password_input == APP_PASSWORD:
-                    st.session_state.authenticated = True
-                    st.rerun()
-                else:
-                    st.error("密码错误，请重试")
-        st.stop()
-
 from dotenv import load_dotenv
 from knowledge_base.fabric_loader import load_all_fabrics
 from knowledge_base.brand_profiles import (
