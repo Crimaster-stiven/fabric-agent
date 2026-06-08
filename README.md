@@ -6,7 +6,7 @@
 
 ## 快速访问
 
-> **在线使用**：部署后直接打开链接即可使用，无需登录、无需安装。
+> **在线使用**：[https://9vhlcfhbznnwbbprzq4zss.streamlit.app/](https://9vhlcfhbznnwbbprzq4zss.streamlit.app/) — 打开即用，无需登录、无需安装。
 
 ## 功能概览
 
