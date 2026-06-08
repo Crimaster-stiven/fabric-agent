@@ -1,0 +1,286 @@
+<mxfile host="app.diagrams.net" agent="Claude" version="24.7.17">
+  <diagram id="fabric-agent" name="面料外贸客户开发 Agent">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- ============================================ -->
+        <!-- 标题 -->
+        <!-- ============================================ -->
+        <mxCell id="title" value="🧵 面料外贸客户开发 Agent — 工作流程" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="200" y="10" width="600" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- 阶段 1: 用户输入 -->
+        <!-- ============================================ -->
+        <mxCell id="p1label" value="阶段 1: 用户输入" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=0;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="390" y="65" width="120" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="input-brand" value="输入目标品牌名称" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=14;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="450" y="88" width="120" height="46" as="geometry"/>
+        </mxCell>
+
+        <!-- 箭头: 输入 → 品牌识别区 -->
+        <mxCell id="arr-in-to-recog" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="input-brand" target="recog-zone">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- 阶段 2: 品牌类型识别 -->
+        <!-- ============================================ -->
+        <mxCell id="p2label" value="阶段 2: 品牌类型识别" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=0;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="390" y="155" width="120" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- 区域容器 -->
+        <mxCell id="recog-zone" value="" style="swimlane;html=1;startSize=24;fillColor=#f5f5f5;strokeColor=#9673a6;strokeWidth=2;fontStyle=1;fontSize=13;fontColor=#9673a6;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="100" y="178" width="780" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="recog-zone-title" value="品牌类型识别" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="390" y="182" width="160" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- 三个识别方式 -->
+        <mxCell id="recog-1" value="① 内置品牌表查询" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="130" y="215" width="170" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="recog-1a" value="50+ 品牌映射表" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#999;" vertex="1" parent="1">
+          <mxGeometry x="130" y="255" width="170" height="16" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="recog-arr-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#9673a6;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry x="300" y="235" as="geometry">
+            <mxPoint x="300" y="235"/>
+            <mxPoint x="340" y="235"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="recog-2" value="② DeepSeek AI 分析" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="345" y="215" width="170" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="recog-2a" value="未知品牌自动兜底" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#999;" vertex="1" parent="1">
+          <mxGeometry x="345" y="255" width="170" height="16" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="recog-arr-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#9673a6;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry x="515" y="235" as="geometry">
+            <mxPoint x="515" y="235"/>
+            <mxPoint x="555" y="235"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="recog-3" value="③ 用户手动选择" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="560" y="215" width="170" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="recog-3a" value="下拉菜单兜底" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#999;" vertex="1" parent="1">
+          <mxGeometry x="560" y="255" width="170" height="16" as="geometry"/>
+        </mxCell>
+
+        <!-- 箭头: 识别 → 匹配 -->
+        <mxCell id="arr-recog-to-match" value="确定品牌类型" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#9673a6;strokeWidth=2;fontSize=11;fontColor=#9673a6;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="308" as="sourcePoint"/>
+            <mxPoint x="490" y="338" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- 阶段 3: 面料匹配引擎 -->
+        <!-- ============================================ -->
+        <mxCell id="p3label" value="阶段 3: 面料匹配引擎" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=0;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="390" y="325" width="120" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="match-zone" value="" style="swimlane;html=1;startSize=24;fillColor=#f5f5f5;strokeColor=#6c8ebf;strokeWidth=2;fontStyle=1;fontSize=13;fontColor=#6c8ebf;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="100" y="348" width="780" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="match-zone-title" value="面料匹配引擎（规则评分算法）" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="370" y="352" width="200" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- 三个评分维度 -->
+        <mxCell id="score-cat" value="🎯 类别权重" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="130" y="388" width="160" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="score-cat-d" value="户外 → 防晒类 +10分" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="130" y="432" width="160" height="22" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="score-brand" value="🔗 品牌适配" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="410" y="388" width="160" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="score-brand-d" value="适合该品牌类型 +3分" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="410" y="432" width="160" height="22" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="score-key" value="🔑 关键词匹配" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="690" y="388" width="160" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="score-key-d" value="功能命中关键词 +1~3分" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="690" y="432" width="160" height="22" as="geometry"/>
+        </mxCell>
+
+        <!-- 求和 -->
+        <mxCell id="sum-label" value="Σ 加权总分 → 降序排列 → 取 Top 5" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="340" y="480" width="280" height="34" as="geometry"/>
+        </mxCell>
+
+        <!-- 箭头: 匹配 → 结果 -->
+        <mxCell id="arr-match-to-result" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="sum-label">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="514" as="targetPoint"/>
+            <mxPoint x="480" y="550" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 推荐结果 -->
+        <mxCell id="result-list" value="面料推荐结果（Top 5）" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=14;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="420" y="548" width="140" height="46" as="geometry"/>
+        </mxCell>
+
+        <!-- 箭头: 结果 → 决策 -->
+        <mxCell id="arr-result-to-decide" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="result-list">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="594" as="targetPoint"/>
+            <mxPoint x="490" y="620" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- 决策分支 -->
+        <!-- ============================================ -->
+        <mxCell id="decide-node" value="是否生成&amp;nbsp;&lt;br&gt;开发邮件?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="450" y="618" width="80" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- 否 → 直接查看 -->
+        <mxCell id="arr-no" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#b85450;strokeWidth=2;fontSize=12;" edge="1" parent="1" source="decide-node">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="653" as="sourcePoint"/>
+            <mxPoint x="280" y="653" as="targetPoint"/>
+            <mxPoint x="280" y="700" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="view-fabrics" value="直接查看面料清单" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="180" y="700" width="180" height="46" as="geometry"/>
+        </mxCell>
+
+        <!-- 是 → 邮件生成 -->
+        <mxCell id="arr-yes" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#82b366;strokeWidth=2;fontSize=12;" edge="1" parent="1" source="decide-node">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="688" as="sourcePoint"/>
+            <mxPoint x="490" y="720" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- 阶段 4: 邮件生成 -->
+        <!-- ============================================ -->
+        <mxCell id="p4label" value="阶段 4: 邮件生成" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=0;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="660" y="640" width="120" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="email-zone" value="" style="swimlane;html=1;startSize=24;fillColor=#f5f5f5;strokeColor=#d79b00;strokeWidth=2;fontStyle=1;fontSize=13;fontColor=#d79b00;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="100" y="760" width="780" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="email-zone-title" value="英文开发邮件生成" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="390" y="764" width="160" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="email-1" value="① 组装 Prompt" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="130" y="798" width="170" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="email-1a" value="品牌信息 + 面料 + 公司信息" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#999;" vertex="1" parent="1">
+          <mxGeometry x="130" y="842" width="170" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="email-arr-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry x="300" y="820" as="geometry">
+            <mxPoint x="300" y="820"/>
+            <mxPoint x="340" y="820"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="email-2" value="② 调用 DeepSeek API" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="345" y="798" width="170" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="email-2a" value="AI 撰写纯文本邮件" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#999;" vertex="1" parent="1">
+          <mxGeometry x="345" y="842" width="170" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="email-arr-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry x="515" y="820" as="geometry">
+            <mxPoint x="515" y="820"/>
+            <mxPoint x="555" y="820"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="email-3" value="③ 输出邮件正文" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="560" y="798" width="170" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="email-3a" value="复制 → 粘贴到邮箱发送" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#999;" vertex="1" parent="1">
+          <mxGeometry x="560" y="842" width="170" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- 数据源（左侧边栏） -->
+        <!-- ============================================ -->
+        <mxCell id="data-title" value="📦 数据源" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="20" y="80" width="80" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="data-csv" value="fabrics.csv&#xa;29 款面料数据" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=1;fontSize=10;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="10" y="108" width="90" height="48" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="data-profiles" value="brand_profiles.py&#xa;6 类品牌权重" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=1;fontSize=10;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="10" y="168" width="90" height="48" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="data-map" value="BRAND_TYPE_MAP&#xa;50+ 品牌映射" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=1;fontSize=10;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="10" y="228" width="90" height="48" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="data-env" value=".env&#xa;API Key 配置" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=1;fontSize=10;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="10" y="288" width="90" height="48" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- 图例 -->
+        <!-- ============================================ -->
+        <mxCell id="legend-title" value="图 例" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="910" y="80" width="80" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="leg-input" value="   用户操作" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=11;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="905" y="110" width="140" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="leg-process" value="   系统处理" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#f5f5f5;strokeColor=#6c8ebf;strokeWidth=2;fontSize=11;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="905" y="140" width="140" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="leg-data" value="   数据存储" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=1;fontSize=11;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="905" y="170" width="140" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="leg-ai" value="   AI 服务" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;fontSize=11;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="905" y="200" width="140" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="leg-decide" value="   决策分支" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=11;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="925" y="232" width="100" height="28" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="leg-output" value="   结果输出" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=11;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="905" y="270" width="140" height="24" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
